@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A3EC6389-E7F7-4595-8AE2-D0A4FE7A657E"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E1038DA-BB94-46F1-A4C1-DB10A78B1D1A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwipeAssignment/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "searchBar(_:textDidChange:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C27A5EE-A511-4BA8-9A61-841ED1A20DAE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwipeAssignment/Views/CommonTextFieldViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C27A5EE-A511-4BA8-9A61-841ED1A20DAE - e603267eda3acd16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwipeAssignment.CommonTextFieldViewCell.textFieldDidEndEditing(__C.UITextField) -&gt; ()"
+                  moduleName = "SwipeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankurbaranwal/Desktop/SwipeAssignment/SwipeAssignment/Views/CommonTextFieldViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "3C27A5EE-A511-4BA8-9A61-841ED1A20DAE - e603267eda3acd16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwipeAssignment.CommonTextFieldViewCell.textFieldDidEndEditing(__C.UITextField) -&gt; ()"
+                  moduleName = "SwipeAssignment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ankurbaranwal/Desktop/SwipeAssignment/SwipeAssignment/Views/CommonTextFieldViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

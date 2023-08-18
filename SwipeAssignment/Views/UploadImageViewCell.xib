@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="169" id="KGk-i7-Jjw" customClass="UploadImageViewCell" customModule="SwipeAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vZ-SQ-1Mo">
+                        <rect key="frame" x="10" y="5" width="300" height="159"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVh-y0-dhT">
+                                <rect key="frame" x="10" y="38" width="170" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WZz-ot-sT8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ahD-Kn-X04">
+                                <rect key="frame" x="190" y="11.666666666666664" width="100" height="82.666666666666686"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5mo-1e-EdN"/>
+                                    <constraint firstAttribute="width" secondItem="ahD-Kn-X04" secondAttribute="height" multiplier="7:6" id="Tp2-cg-oMX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ahD-Kn-X04" firstAttribute="top" secondItem="7vZ-SQ-1Mo" secondAttribute="top" constant="10" id="H6L-sF-hdc"/>
+                            <constraint firstItem="iVh-y0-dhT" firstAttribute="centerY" secondItem="ahD-Kn-X04" secondAttribute="centerY" id="IZw-b8-cq0"/>
+                            <constraint firstItem="iVh-y0-dhT" firstAttribute="leading" secondItem="7vZ-SQ-1Mo" secondAttribute="leading" constant="10" id="N4e-zy-2XM"/>
+                            <constraint firstAttribute="trailing" secondItem="ahD-Kn-X04" secondAttribute="trailing" constant="10" id="aHu-4b-KKM"/>
+                            <constraint firstItem="ahD-Kn-X04" firstAttribute="leading" secondItem="iVh-y0-dhT" secondAttribute="trailing" constant="10" id="ae8-sG-6r8"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ahD-Kn-X04" secondAttribute="bottom" constant="10" id="d3C-TS-86y"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7vZ-SQ-1Mo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="38q-z5-X2n"/>
+                    <constraint firstItem="7vZ-SQ-1Mo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Dp6-Cn-g8p"/>
+                    <constraint firstAttribute="trailing" secondItem="7vZ-SQ-1Mo" secondAttribute="trailing" constant="10" id="mjd-ft-Dsk"/>
+                    <constraint firstAttribute="bottom" secondItem="7vZ-SQ-1Mo" secondAttribute="bottom" constant="5" id="w1G-t1-acK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productImage" destination="ahD-Kn-X04" id="iOa-NB-yM7"/>
+            </connections>
+            <point key="canvasLocation" x="100.76335877862596" y="63.732394366197184"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
