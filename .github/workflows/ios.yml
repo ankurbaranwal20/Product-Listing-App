@@ -25,6 +25,13 @@ jobs:
           -project SwipeAssignment.xcodeproj \
           -scheme SwipeAssignment
 
+	- name: Build App
+        run: |
+          xcodebuild build \
+          -project SwipeAssignment.xcodeproj \
+          -scheme SwipeAssignment \
+          -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
+
       - name: Run Unit Tests
         run: |
           xcodebuild test \

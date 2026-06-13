@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var workItem: DispatchWorkItem?
     var refreshControl = UIRefreshControl()
     var productViewModal = ProductViewModal()
+    var str = "dsdsd
 
     override func viewDidLoad() {
         super.viewDidLoad()
