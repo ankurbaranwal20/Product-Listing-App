@@ -27,5 +27,5 @@ jobs:
             -project SwipeAssignment.xcodeproj \
             -scheme SwipeAssignment \
             -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
-	    -enableCodeCoverage YES \
-	     CODE_SIGNING_ALLOWED=NO
+            -enableCodeCoverage YES \
+            CODE_SIGNING_ALLOWED=NO
