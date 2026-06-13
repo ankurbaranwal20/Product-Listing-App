@@ -1,7 +1,7 @@
 name: iOS CI
 
 on:
- push:
+  push:
     branches:
       - main
   pull_request:
@@ -22,19 +22,12 @@ jobs:
       - name: Resolve Swift Package Dependencies
         run: |
           xcodebuild -resolvePackageDependencies \
-            -project SwipeAssignment.xcodeproj \
-            -scheme SwipeAssignment
-
-      - name: Build App
-        run: |
-          xcodebuild build \
-            -project SwipeAssignment.xcodeproj \
-            -scheme SwipeAssignment \
-            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=latest'
+          -project SwipeAssignment.xcodeproj \
+          -scheme SwipeAssignment
 
       - name: Run Unit Tests
         run: |
           xcodebuild test \
-            -project SwipeAssignment.xcodeproj \
-            -scheme SwipeAssignment \
-            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=latest'
+          -project SwipeAssignment.xcodeproj \
+          -scheme SwipeAssignment \
+          -destination 'platform=iOS Simulator,OS=latest,name=iPhone 17 Pro'
