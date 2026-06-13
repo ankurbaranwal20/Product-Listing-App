@@ -1,4 +1,4 @@
-framework module Pods_SwipeAssignment {
+module Pods_SwipeAssignment {
   umbrella header "Pods-SwipeAssignment-umbrella.h"
 
   export *

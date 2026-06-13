@@ -2,10 +2,9 @@
 # platform :ios, '9.0'
 
 target 'SwipeAssignment' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+      pod 'Kingfisher'
+    end
 
-pod 'Kingfisher'
-  # Pods for SwipeAssignment
-
-end
+    target 'SwipeAssignmentTests' do
+      pod 'Kingfisher'
+    end
