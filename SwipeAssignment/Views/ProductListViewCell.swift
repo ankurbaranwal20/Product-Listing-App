@@ -39,7 +39,6 @@ class ProductListViewCell: UITableViewCell {
             self.taxLabel.text = ""
         }
         
-        
         self.productImage.kf.indicatorType = .activity
         self.productImage.kf.setImage(with: URL(string: data.image),placeholder: UIImage(systemName: "photo"))
         

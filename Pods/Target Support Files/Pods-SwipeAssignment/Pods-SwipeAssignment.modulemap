@@ -1,6 +1,0 @@
-module Pods_SwipeAssignment {
-  umbrella header "Pods-SwipeAssignment-umbrella.h"
-
-  export *
-  module * { export * }
-}

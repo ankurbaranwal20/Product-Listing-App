@@ -1,1 +1,0 @@
-../../../Target Support Files/Kingfisher-iOS26.4/Kingfisher-iOS26.4-umbrella.h

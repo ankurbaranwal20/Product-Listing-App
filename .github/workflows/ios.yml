@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout source
         uses: actions/checkout@v4
 
       - name: Select Xcode
@@ -19,12 +19,15 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - name: Install Dependencies
-        run: pod install
+      - name: Resolve Swift Package Dependencies
+        run: |
+          xcodebuild -resolvePackageDependencies \
+          -project SwipeAssignment.xcodeproj \
+          -scheme SwipeAssignment
 
       - name: Run Unit Tests
         run: |
           xcodebuild test \
-            -workspace SwipeAssignment.xcworkspace \
-            -scheme SwipeAssignment \
-            -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
+          -project SwipeAssignment.xcodeproj \
+          -scheme SwipeAssignment \
+          -destination 'platform=iOS Simulator,OS=latest,name=iPhone 17 Pro'
