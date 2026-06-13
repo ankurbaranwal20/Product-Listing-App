@@ -2,8 +2,6 @@ name: iOS CI
 
 on:
   push:
-    branches:
-      - main
   pull_request:
 
 jobs:
@@ -11,30 +9,21 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Select Xcode
-        uses: maxim-lobanov/setup-xcode@v1
+      - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: latest-stable
 
-      - name: Resolve Swift Package Dependencies
+      - name: Resolve Packages
         run: |
           xcodebuild -resolvePackageDependencies \
-          -project SwipeAssignment.xcodeproj \
-          -scheme SwipeAssignment
-
-	- name: Build App
-        run: |
-          xcodebuild build \
-          -project SwipeAssignment.xcodeproj \
-          -scheme SwipeAssignment \
-          -destination 'platform=iOS Simulator,OS=latest,name=iPhone 17 Pro'
+            -project SwipeAssignment.xcodeproj \
+            -scheme SwipeAssignment
 
       - name: Run Unit Tests
         run: |
           xcodebuild test \
-          -project SwipeAssignment.xcodeproj \
-          -scheme SwipeAssignment \
-          -destination 'platform=iOS Simulator,OS=latest,name=iPhone 17 Pro'
+            -project SwipeAssignment.xcodeproj \
+            -scheme SwipeAssignment \
+            -destination 'platform=iOS Simulator,name=iPhone 16'
