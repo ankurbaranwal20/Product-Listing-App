@@ -30,11 +30,11 @@ jobs:
           xcodebuild build \
             -project SwipeAssignment.xcodeproj \
             -scheme SwipeAssignment \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest'
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=latest'
 
       - name: Run Unit Tests
         run: |
           xcodebuild test \
             -project SwipeAssignment.xcodeproj \
             -scheme SwipeAssignment \
-            -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest'
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=latest'
