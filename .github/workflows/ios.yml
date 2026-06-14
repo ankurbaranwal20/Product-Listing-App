@@ -28,6 +28,7 @@ jobs:
             -scheme SwipeAssignment \
             -destination 'platform=iOS Simulator,OS=latest,name=iPhone 17 Pro' \
             -enableCodeCoverage YES \
+		-resultBundlePath TestResults \
             CODE_SIGNING_ALLOWED=NO
 
       - name: Upload coverage reports to Codecov
