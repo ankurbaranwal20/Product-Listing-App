@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     var workItem: DispatchWorkItem?
     var refreshControl = UIRefreshControl()
     var productViewModal = ProductViewModal()
-    let image = UIImage(named: "abc")!
 
     override func viewDidLoad() {
         super.viewDidLoad()
