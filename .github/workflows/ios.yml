@@ -15,30 +15,11 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - name: Resolve Packages
-        run: |
-          xcodebuild -resolvePackageDependencies \
-            -project SwipeAssignment.xcodeproj \
-            -scheme SwipeAssignment
+      - name: Install Bundler
+        run: gem install bundler
 
-      - name: Install SwiftLint
-        run: brew install swiftlint
+      - name: Install Gems
+        run: bundle install
 
-      - name: Run SwiftLint
-        run: swiftlint
-
-      - name: Run Unit Tests
-        run: |
-          xcodebuild test \
-            -project SwipeAssignment.xcodeproj \
-            -scheme SwipeAssignment \
-            -destination 'platform=iOS Simulator,OS=latest,name=iPhone 17 Pro' \
-            -enableCodeCoverage YES \
-            -resultBundlePath TestResults \
-            CODE_SIGNING_ALLOWED=NO
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          verbose: true
+      - name: Run Fastlane CI
+        run: bundle exec fastlane ci
