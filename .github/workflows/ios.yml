@@ -21,5 +21,8 @@ jobs:
       - name: Install Gems
         run: bundle install
 
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
       - name: Run Fastlane CI
         run: bundle exec fastlane ci
