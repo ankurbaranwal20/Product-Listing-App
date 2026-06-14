@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var workItem: DispatchWorkItem?
+    var workItem: DispatchWorkItem!
     var refreshControl = UIRefreshControl()
     var productViewModal = ProductViewModal()
 
