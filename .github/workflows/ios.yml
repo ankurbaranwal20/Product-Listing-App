@@ -21,6 +21,12 @@ jobs:
             -project SwipeAssignment.xcodeproj \
             -scheme SwipeAssignment
 
+      - name: Install SwiftLint
+        run: brew install swiftlint
+
+      - name: Run SwiftLint
+        run: swiftlint
+
       - name: Run Unit Tests
         run: |
           xcodebuild test \
